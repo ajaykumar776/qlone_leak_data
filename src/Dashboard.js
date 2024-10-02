@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [remaining, setRemaining] = useState(0);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [baseUrl, setBaseUrl] = useState(''); // State to store the base URL
+  const [baseUrl, setBaseUrl] = useState('https://www.qloneapp.com/api/1.0/obj/user'); // State to store the base URL
   const [totalRecords, setTotalRecords] = useState(0); // New state to store total records
   const limit = 100;
 
@@ -71,15 +71,15 @@ const Dashboard = () => {
       <h1 className="text-2xl font-bold mb-6">User Dashboard</h1>
 
       {/* Base URL Input */}
-      <div className="mb-4">
+      {/* <div className="mb-4">
         <input
           type="text"
-          placeholder="Enter Base URL (e.g., https://www.qloneapp.com/version-test/api/1.0/obj/user)"
+          placeholder="Enter Base URL (e.g., https://www.qloneapp.com/api/1.0/obj/user)"
           className="border border-gray-300 rounded-lg py-2 px-4 w-full"
           value={baseUrl}
           onChange={(e) => setBaseUrl(e.target.value)}
         />
-      </div>
+      </div> */}
 
       {/* Total Records */}
       <p className="mb-4 text-gray-700">Total Users in the System: {totalRecords}</p>
